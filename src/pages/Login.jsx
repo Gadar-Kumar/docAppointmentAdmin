@@ -32,7 +32,7 @@ const onSubmitHandler=async(e)=>{
       if(data.success){
         setToken(data.token)
         localStorage.setItem('token',data.token)
-        console.log(data.token);
+        // console.log(data.token);
         toast.success(data.message)
       }else{
        toast.error(data.message)
@@ -43,7 +43,7 @@ const onSubmitHandler=async(e)=>{
         if(data.success){
           localStorage.setItem('dtoken',data.token)
           setDtoken(data.token)
-          console.log(data.token);
+          // console.log(data.token);
           
         }else{
           toast.error(data.message)
