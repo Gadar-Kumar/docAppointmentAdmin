@@ -56,7 +56,7 @@ const onSubmitHandler=async(e)=>{
 
   return (
     <div>
-      <form onSubmit={onSubmitHandler} className='min-h-[80vh] flex items-center' action="">
+      <form onSubmit={onSubmitHandler} className='min-h-[80vh] dark:text-white flex items-center' action="">
         <div className='flex flex-col gap-3 m-auto items-start p-8 min-w-[340px] sm:min-w-96 border rounded-xl text-sm shadow-lg'>
           <p className='text-2xl m-auto font-semibold'><span className='text-blue-400'>{state}</span> Login</p>
           <div className='w-full'>

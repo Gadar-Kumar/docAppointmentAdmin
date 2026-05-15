@@ -51,10 +51,10 @@ function DoctorProfile() {
         <div>
           <img className='bg-blue-400 w-full sm:max-w-64 rounded-lg' src={profileData.image} alt="" />
         </div>
-        <div className='flex-1 border border-stone-100 rounded-lg p-8 py-7 bg-white'>
+        <div className='flex-1 border dark:bg-black border-stone-100 rounded-lg p-8 py-7 bg-white'>
           {/* -- Doc Info*/}
-          <p className='flex items-center gap-2 text-3xl font-medium text-gray-700'>{profileData.name}</p>
-          <div className='flex items-center gap-2 mt-1 text-gray-600'>
+          <p className='flex items-center gap-2 text-3xl font-medium dark:text-white text-gray-700'>{profileData.name}</p>
+          <div className='flex items-center gap-2 mt-1 dark:text-white text-gray-600'>
             <p>
               {profileData.degree}-{profileData.speciality}
             </p>
@@ -62,12 +62,12 @@ function DoctorProfile() {
           </div>
           {/**--Doc About */}
           <div>
-            <p className='flex items-center gap-1 text-sm font-medium'>About</p>
-            <p className='text-sm text-gray-600 max-w-[700px] mt-1'>
+            <p className='flex items-center gap-1 text-sm  font-medium'>About</p>
+            <p className='text-sm dark:text-white text-gray-600 max-w-[700px] mt-1'>
               {profileData.about}
             </p>
           </div>
-          <p className='text-gray-600 font-medium mt-4'>Appointment Fees: <span className='text-gray-800'>{currency} {isEdit ? <input type="number" onChange={(e) => setProfileData(prev => ({ ...prev, fees:e.target.value }))} value={profileData.fees} /> : profileData.fees} </span></p>
+          <p className='text-gray-600 dark:text-white font-medium mt-4'>Appointment Fees: <span className='text-gray-800 dark:text-white'>{currency} {isEdit ? <input type="number" onChange={(e) => setProfileData(prev => ({ ...prev, fees:e.target.value }))} value={profileData.fees} /> : profileData.fees} </span></p>
           <div className='flex gap-2 py-2'>
             <p>Address:</p>
             <p>

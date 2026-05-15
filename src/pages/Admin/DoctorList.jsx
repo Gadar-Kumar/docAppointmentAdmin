@@ -19,11 +19,11 @@ function DoctorList() {
           <div className='border border-indigo-200 rounded-xl max-w-56 overflow-hidden cursor-pointer group' key={index}>
             <img className='bg-indigo-50 group-hover:bg-blue-500 transition-all duration-500' src={item.image} alt="" />
             <div className='p-4'>
-              <p className='text-neutral-800 text-lg font-medium'>{item.name}</p>
+              <p className='text-neutral-800 dark:text-white text-lg font-medium'>{item.name}</p>
               <p className='mt-2 flex items-center gap-1 text-sm'>{item.speciality}</p>
               <div>
                 <input onChange={()=>changeAvailability(item._id)} type="checkbox"  checked={item.available}/>
-                <p>Available</p>
+                <p className='dark:text-white'>Available</p>
               </div>
             </div>
           </div>

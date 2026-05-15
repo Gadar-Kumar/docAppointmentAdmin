@@ -80,16 +80,16 @@ function AddDoctor() {
     return (
         <form onSubmit={onSubmitHandler} className='m-5 w-full'>
             <p className='mb-3 text-lg font-medium'>Add Doctor</p>
-            <div className='bg-white px-8 py-8 border rounded w-full max-w-4xl max-h-[80vh] overflow-y-scroll'>
-                <div className='flex items-center gap-4 mb-8 text-gray-600'>
+            <div className='bg-white dark:bg-black px-8 py-8 border rounded w-full max-w-4xl max-h-[80vh] overflow-y-scroll'>
+                <div className='flex items-center gap-4 mb-8 dark:text-white text-gray-600'>
                     <label htmlFor="doc-image">
-                        <img className='w-16 bg-gray-100 rounded-full cursor-pointer' src={docImg ? URL.createObjectURL(docImg) : assets.upload_area} alt="" />
+                        <img className='w-16  bg-gray-100 rounded-full cursor-pointer' src={docImg ? URL.createObjectURL(docImg) : assets.upload_area} alt="" />
                     </label>
                     <input onChange={(e) => setDocImg(e.target.files[0])} type="file" id='doc-image' hidden />
                     <p>Upload doctor <br />picture</p>
                 </div>
 
-                <div className='flex flex-col lg:flex-row items-start gap-10 text-gray-600'>
+                <div className='flex flex-col lg:flex-row items-start gap-10 dark:text-white text-gray-600'>
 
                     <div className='w-full lg:flex-1 flex flex-col gap-4'>
 
@@ -98,24 +98,24 @@ function AddDoctor() {
                             <p>Doctor name</p>
                             <input onChange={(e) => setName(e.target.value)}
                                 value={name}
-                                className='border rounded px-3 py-2' type="text" placeholder='name' required />
+                                className='border rounded px-3 py-2 dark:text-white' type="text" placeholder='name' required />
                         </div>
 
                         <div className='flex-1 flex flex-col gap-1'>
                             <p>Doctor email</p>
                             <input onChange={(e) => setEmail(e.target.value)}
-                                value={email} className='border rounded  px-3 py-2' type="email" placeholder='email' required />
+                                value={email} className='border rounded dark:text-white px-3 py-2' type="email" placeholder='email' required />
                         </div>
 
                         <div className='flex-1 flex flex-col gap-1'>
                             <p>Doctor password</p>
                             <input onChange={(e) => setPassword(e.target.value)}
-                                value={password} className='border rounded px-3 py-2' type="password" placeholder='password' required />
+                                value={password} className='border rounded dark:text-white px-3 py-2' type="password" placeholder='password' required />
                         </div>
 
-                        <div className='flex-1 flex flex-col gap-1'>
+                        <div className='flex-1 flex flex-col gap-1 dark:text-white '>
                             <p>Experience</p>
-                            <select onChange={(e) => setExperience(e.target.value)} value={experience} className='border bounded px-3 py-2' name="" id="">
+                            <select onChange={(e) => setExperience(e.target.value)} value={experience} className='border bounded px-3 py-2 dark:bg-black' name="" id="">
                                 <option value="1 Year">1 Year</option>
                                 <option value="2 Year">2 Year</option>
                                 <option value="3 Year">3 Year</option>
@@ -127,18 +127,18 @@ function AddDoctor() {
                             </select>
                         </div>
 
-                        <div className='flex-1 flex flex-col gap-1'>
+                        <div className='flex-1 flex flex-col gap-1 dark:text-white'>
                             <p>Fees</p>
                             <input onChange={(e) => setFees(e.target.value)}
-                                value={fees} className='border bounded px-3 py-2' type="number" placeholder='fees' required />
+                                value={fees} className='border bounded px-3 py-2 dark:text-white' type="number" placeholder='fees' required />
                         </div>
                     </div>
 
                     <div className='w-full lg:flex-1 flex flex-col gap-4'>
-                        <div className='flex-1 flex flex-col gap-1'>
+                        <div className='flex-1 flex flex-col gap-1 dark:text-white'>
                             <p>Speciality</p>
                             <select onChange={(e) => setSpeciality(e.target.value)}
-                                value={speciality} className='border bounded px-3 py-2' >
+                                value={speciality} className='border bounded px-3 py-2 dark:bg-black dark:text-white' >
                                 <option value="General physician">General physician</option>
                                 <option value="Gynecologist">Gynecologist</option>
                                 <option value="Dermatologist">Dermatologist</option>
@@ -148,18 +148,18 @@ function AddDoctor() {
                             </select>
                         </div>
 
-                        <div>
+                        <div className='dark:text-white'>
                             <p>Education</p>
                             <input onChange={(e) => setDegree(e.target.value)}
-                                value={degree} className='border bounded px-3 py-2' type="text" placeholder='Education' required />
+                                value={degree} className='border bounded px-3 py-2 dark:text-white' type="text" placeholder='Education' required />
                         </div>
 
                         <div>
                             <p>Address</p>
                             <input onChange={(e) => setAddress1(e.target.value)}
-                                value={address1} className='border bounded px-3 py-2' type="text" placeholder='Address1' required />
+                                value={address1} className='border bounded px-3 py-2 dark:text-white' type="text" placeholder='Address1' required />
                             <input onChange={(e) => setAddress2(e.target.value)}
-                                value={address2} className='border bounded px-3 py-2 mt-2' type="text" placeholder='Address2' required />
+                                value={address2} className='border bounded px-3 py-2 mt-2 dark:text-white' type="text" placeholder='Address2' required />
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@ function AddDoctor() {
                 <div>
                     <p className='mt-4 mb-2'>About</p>
                     <textarea onChange={(e) => setAbout(e.target.value)}
-                        value={about} className='w-full px-4 border rounded' type="text" placeholder='Write about doctor' rows={5} required />
+                        value={about} className='w-full px-4 border rounded dark:text-white' type="text" placeholder='Write about doctor' rows={5} required />
                 </div>
                 <button type='submit' className='bg-blue-500 cursor-pointer px-10 py-2 text-white rounded-full'>Add Doctor</button>
             </div>

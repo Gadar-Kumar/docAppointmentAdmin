@@ -3,3 +3,4 @@
 ::-webkit-scrollbar{
     @apply hidden
 }
+@custom-variant dark (&:where(.dark, .dark *));

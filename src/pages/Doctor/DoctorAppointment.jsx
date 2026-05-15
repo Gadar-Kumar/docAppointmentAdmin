@@ -24,7 +24,7 @@ function DoctorAppointment() {
     <div className='w-full max-w-6xl m-5'>
       <p className='mb-3 text-lg font-medium'>All Appointments</p>
 
-      <div className='bg-white  rounded text-sm max-h-[80vh] overflow-y-scroll min-h-[50vh]'>
+      <div className='bg-white  dark:bg-black rounded text-sm max-h-[80vh] overflow-y-scroll min-h-[50vh]'>
         <div className='max-sm:hidden grid grid-cols-[0.5fr_2fr_1fr_1fr_3fr_1fr_1fr] gap-1 py-3 px-6 border-b'>
             <p>#</p>
             <p>Patient</p>
@@ -36,7 +36,7 @@ function DoctorAppointment() {
         </div>
         {
             appointments.reverse().map((item,index)=>(
-                <div className='flex flex-wrap justify-between max-sm:text-base sm:grid sm:grid-cols-[0.5fr_2fr_1fr_1fr_3fr_1fr_1fr] gap-1 items-center text-gray-500 py-3 px-6 border-b hover:bg-gray-50' key={index}>
+                <div className='flex flex-wrap justify-between max-sm:text-base dark:bg-black sm:grid sm:grid-cols-[0.5fr_2fr_1fr_1fr_3fr_1fr_1fr] gap-1 items-center dark:text-white dark:hover:bg-gray-600 text-gray-500 py-3 px-6 border-b hover:bg-gray-50' key={index}>
                     <p className='max-sm:hidden'>{index+1}</p>
                     <div className='flex items-center gap-2'>
                         <img className='w-8 rounded-full' src={item.userData.image} alt="" />
