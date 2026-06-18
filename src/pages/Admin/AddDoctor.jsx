@@ -19,6 +19,7 @@ function AddDoctor() {
     const [degree, setDegree] = useState('')
     const [address1, setAddress1] = useState('')
     const [address2, setAddress2] = useState('')
+    const [city, setCity] = useState('')
 
     const { token, backendURL } = useContext(AdminContext)
 
@@ -42,6 +43,7 @@ function AddDoctor() {
             formData.append('speciality',speciality)
             formData.append('degree',degree)
             formData.append('address',JSON.stringify({line1:address1,line2:address2})) // using json and stringify it
+            formData.append('city',city)
 
         //    formData
         //    formData.forEach((value,key)=>{
@@ -63,6 +65,7 @@ function AddDoctor() {
             setEmail('')
             setAddress1('')
             setAddress2('')
+            setCity('')
             setDegree('')
             setFees('')
            }else{
@@ -157,10 +160,11 @@ function AddDoctor() {
                         <div>
                             <p>Address</p>
                             <input onChange={(e) => setAddress1(e.target.value)}
-                                value={address1} className='border bounded px-3 py-2 dark:text-white' type="text" placeholder='Address1' required />
+                                value={address1} className='border bounded px-3 py-2 dark:text-white' type="text" placeholder='Enter building no,street name...' required />
                             <input onChange={(e) => setAddress2(e.target.value)}
-                                value={address2} className='border bounded px-3 py-2 mt-2 dark:text-white' type="text" placeholder='Address2' required />
+                                value={address2} className='border bounded px-3 py-2 mt-2 dark:text-white' type="text" placeholder='Enter city name only' required />
                         </div>
+                       
                     </div>
                 </div>
 
